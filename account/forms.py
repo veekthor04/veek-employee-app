@@ -6,11 +6,15 @@ from employee_data.models import Data
 
 # Create the form class.
 class DataForm(ModelForm):
+
+    # Form to get employee data for the data model
     class Meta:
          model = Data
          fields = '__all__'
 
 class UserRegistrationForm(forms.ModelForm):
+    
+    # Form to get registration info
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
     

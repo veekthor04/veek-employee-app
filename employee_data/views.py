@@ -5,10 +5,6 @@ from django.shortcuts import redirect
 from .models import Data
 from .serializers import DataSerializer
 import gspread
-import os
-import json
-
-credentials_raw = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
 
 # Create your views here.
 class DataList(generics.ListCreateAPIView):
@@ -24,7 +20,7 @@ class DataDetail(generics.RetrieveUpdateDestroyAPIView):
 @api_view(['GET'])
 def DataLoad(request, key):
 
-    gc = gspread.service_account(json.loads(credentials_raw))
+    gc = gspread.service_account(filename='credentials.json')
     try:
         sh = gc.open_by_key(key)
         worksheet = sh.sheet1

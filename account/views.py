@@ -8,6 +8,8 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def index(request):
+
+    # Renders the index page, gets data from the form and saves it
     message = ''
     if request.method == 'POST':
         data = DataForm(request.POST)
@@ -22,6 +24,8 @@ def index(request):
     return render(request, 'account/index.html', {'form':form, 'message': message})
 
 def register(request):
+
+    # Gets registration form and validates it
     if request.method == 'POST':
         # Get form data from the post
         user_form = UserRegistrationForm(request.POST)
