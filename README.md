@@ -10,12 +10,12 @@ USER MANUAL
 6. Start Django app; python manage.py runserver
 7. Open http://127.0.0.1:8000/ in a browser to access the user interface
 8. Open http://127.0.0.1:8000/api/v1/ to view all data in the employee model
-9. Open http://127.0.0.1:8000/api/v1/spreadsheet/13yyd8s008LlRn0tn6LC5moH1fcBELBkYw2THX6gjdHU/ to add data in the google spreadsheet
+9. Open http://127.0.0.1:8000/api/v1/spreadsheet/13yyd8s008LlRn0tn6LC5moH1fcBELBkYw2THX6gjdHU/ to add data from the google spreadsheet to the model
 
 Routes: 
-'' 
-'api/v1/'
-'api/v1/spreadsheet/<key>/'   where key is the google spreadshee id
+- '' 
+- 'api/v1/'
+- 'api/v1/spreadsheet/<key>/'   where key is the google spreadshee id
 
 
 Admin mamagement: the admin can visit the '/admin/' to view the models
@@ -24,6 +24,6 @@ Environmental variables used are:
 - DATABASE_URL,
 
 Aditional infomation: 
-Run Django 'python manage.py createsuperuser' to create an admin account
+- Run Django 'python manage.py createsuperuser' to create an admin account
 
-Hosted Link: https://veek-employee-app.herokuapp.com/
+- Hosted Link: https://veek-employee-app.herokuapp.com/
